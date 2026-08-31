@@ -1,91 +1,83 @@
+/* Reset e bases de acessibilidade */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: #fff;
-  display: flex;
-  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #111111; /* Alto contraste para facilitar leitura */
+  background-color: #f4f4f9;
   padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.container {
-  width: 100%;
-  max-width: 500px;
-  background-color: #2d2d2d;
-  padding: 20px;
+header {
+  background-color: #004080; /* Azul escuro acessível */
+  color: #ffffff;
+  padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  margin-bottom: 24px;
 }
 
-h1 {
-  font-size: 1.4rem;
-  text-align: center;
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
-.controls {
+nav ul {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
+  gap: 16px;
 }
 
-button {
-  padding: 10px 15px;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline; /* Mantém sublinhado para identificação clara de link */
 }
 
-button:disabled {
-  background-color: #555;
-  cursor: not-allowed;
+/* Destaque visual de foco para navegação por teclado (Tab) */
+a:focus {
+  outline: 4px solid #ffbf47;
+  outline-offset: 2px;
+  background-color: #00264d;
 }
 
-.hardware-view {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.component {
+main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  gap: 20px;
 }
 
-.led {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #333;
-  box-shadow: 0 0 5px #000;
-  transition: background-color 0.05s;
+section {
+  background-color: #ffffff;
+  padding: 24px;
+  border-left: 6px solid #004080;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.motor {
-  width: 40px;
-  height: 40px;
-  border: 4px dashed #666;
-  border-radius: 50%;
+h2 {
+  font-size: 1.5rem;
+  color: #004080;
+  margin-bottom: 12px;
 }
 
-.motor.ativo {
-  border-color: #00ffcc;
-  animation: spin 0.5s linear infinite;
+ul {
+  padding-left: 20px;
 }
 
-@keyframes spin {
-  100% { transform: rotate(360deg); }
+li {
+  margin-bottom: 10px;
 }
 
-.terminal {
-  background-color: #000;
-  color: #00ff00;
-  font-family: monospace;
-  padding: 10px;
-  border-radius: 4px;
-  height: 180px;
-  overflow-y: auto;
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444444;
 }

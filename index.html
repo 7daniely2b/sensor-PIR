@@ -1,44 +1,46 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protótipo de Acessibilidade</title>
+  <title>Acessibilidade com Sensores PIR</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Sistema de Acessibilidade</h1>
+  <header>
+    <h1>Acessibilidade e Sensores PIR</h1>
+    <nav aria-label="Navegação Principal">
+      <ul>
+        <li><a href="#sobre">O Sensor</a></li>
+        <li><a href="#aplicacoes">Aplicações</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="controls">
-      <button id="btn-pir">Simular Movimento (PIR)</button>
-      <label>
-        <input type="checkbox" id="usar-motor" checked> Usar Motor
-      </label>
-    </div>
+  <main>
+    <section id="sobre">
+      <h2>O que é o Sensor PIR?</h2>
+      <p>O sensor PIR (Infravermelho Passivo) mede a radiação infravermelha emitida por corpos quentes em seu campo de visão. Em projetos de acessibilidade, ele elimina a necessidade de acionamento manual por botões ou interruptores.</p>
+    </section>
 
-    <div class="hardware-view">
-      <div class="component">
-        <span>LED 1</span>
-        <div id="led1" class="led"></div>
-      </div>
-      <div class="component">
-        <span>LED 2</span>
-        <div id="led2" class="led"></div>
-      </div>
-      <div class="component">
-        <span>Motor DC</span>
-        <div id="motor" class="motor"></div>
-      </div>
-    </div>
+    <section id="aplicacoes">
+      <h2>Aplicações de Acessibilidade</h2>
+      <ul>
+        <li><strong>Iluminação Automática:</strong> Acende lâmpadas ao detectar a presença de uma pessoa, reduzindo o risco de quedas para idosos e deficientes visuais.</li>
+        <li><strong>Abertura de Portas:</strong> Permite a passagem livre de cadeirantes sem exigir força física para girar maçanetas.</li>
+        <li><strong>Sinais de Alerta:</strong> Dispara avisos sonoros ou luminosos de aproximação em corredores ou obstáculos.</li>
+      </ul>
+    </section>
 
-    <div class="terminal">
-      <h3>Monitor Serial</h3>
-      <div id="serial-log">=================================<br>Sistema de Acessibilidade<br>Aguardando movimento...<br>=================================<br></div>
-    </div>
-  </div>
+    <section id="beneficios">
+      <h2>Impacto da Automação Sem Toque</h2>
+      <p>A inclusão de sensores em ambientes públicos e residenciais garante autonomia e segurança para pessoas com mobilidade reduzida ou limitações motoras graves.</p>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2026 Projeto Acessibilidade - Tecnologia Assistiva</p>
+  </footer>
 </body>
 </html>
-
